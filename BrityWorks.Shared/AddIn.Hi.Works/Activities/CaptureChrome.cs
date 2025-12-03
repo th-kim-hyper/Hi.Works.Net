@@ -57,34 +57,35 @@ namespace BrityWorks.AddIn.Hi.Works.Activities
         {
             var result = false;
 
-            try
-            {
-                var element = properties[ChromeElementPropKey] as ElementHandle;
-                var dir = properties[SaveDirPropKey].ToStr();
-                var fileName = properties[FileNamePropKey].ToStr();
-                var extension = properties[FileExtensionPropKey].ToStr();
-                var option = new ScreenshotOptions() { Type = ScreenshotType.Png };
-                var savePath = System.IO.Path.Combine(dir, $"{fileName}.{extension}");
-                var frame = element.ExecutionContext.Frame;
+            //try
+            //{
+            //    var element = properties[ChromeElementPropKey] as ElementHandle;
+            //    var dir = properties[SaveDirPropKey].ToStr();
+            //    var fileName = properties[FileNamePropKey].ToStr();
+            //    var extension = properties[FileExtensionPropKey].ToStr();
+            //    var screenshotType = ScreenshotType.Png;
+            //    var option = new ScreenshotOptions() { Type = screenshotType };
+            //    var savePath = System.IO.Path.Combine(dir, $"{fileName}.{extension}");
+            //    var frame = element.ExecutionContext.Frame;
 
-                if (!extension.EqualsEx("png", true))
-                {
-                    option.Type = ScreenshotType.Jpeg;
-                }
+            //    if (!extension.EqualsEx("png", true))
+            //    {
+            //        option.Type = ScreenshotType.Jpeg;
+            //    }
                 
-                if (element is ElementHandle)
-                {
-                    element.EvaluateFunctionAsync("(e) => e.scrollIntoView(true)").Wait();
-                    frame.WaitForTimeoutAsync(2000).Wait();
-                    result = element.ScreenshotAsync(savePath, option).Wait(2000);
-                }
-            }
-            // 오류 발생시 success 를 false로 설정하고, throw로 exception을 던짐.
-            catch (Exception e)
-            {
-                result = false;
-                throw e.InnerException;
-            }
+            //    if (element is ElementHandle)
+            //    {
+            //        element.EvaluateFunctionAsync("(e) => e.scrollIntoView(true)").Wait();
+            //        frame.WaitForTimeoutAsync(2000).Wait();
+            //        result = element.ScreenshotAsync(savePath, option).Wait(2000);
+            //    }
+            //}
+            //// 오류 발생시 success 를 false로 설정하고, throw로 exception을 던짐.
+            //catch (Exception e)
+            //{
+            //    result = false;
+            //    throw e.InnerException;
+            //}
 
             // 결과값 리턴
             return result;

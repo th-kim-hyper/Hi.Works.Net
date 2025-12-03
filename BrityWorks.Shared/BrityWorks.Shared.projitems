@@ -9,6 +9,7 @@
     <Import_RootNamespace>BrityWorks</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AddIn.Hi.Works\Activities\CaptchaChrome.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AddIn.Hi.Works\Activities\CaptureChrome.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AddIn.Hi.Works\Activities\CloseWindowHwnd.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AddIn.Hi.Works\Activities\DialogHandler.cs" />

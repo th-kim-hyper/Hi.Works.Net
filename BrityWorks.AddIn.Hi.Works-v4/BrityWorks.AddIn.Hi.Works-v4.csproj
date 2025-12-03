@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B226B99-F751-4636-B78A-CCE17A85D583}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrityWorks.AddIn.Hi.Works</RootNamespace>
+    <AssemblyName>BrityWorks.AddIn.Hi.Works</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Users\th.kim\AppData\Roaming\Brity RPA Designer\AddIns\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IPA.AddIn, Version=4.0.125.730, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.AddIn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Common, Version=4.0.125.730, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Common.Data, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Common.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Common.Security, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Common.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Common.UI, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Common.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Common.Update, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Common.Update.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Core, Version=4.0.125.730, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Core.Engine, Version=4.0.125.730, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Core.Engine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Core.Inspect, Version=4.0.125.730, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Core.Inspect.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Core.Integration.Inspect, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Core.Integration.Inspect.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Core.ServiceClient, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Core.ServiceClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Core.VDIAgentService, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Core.VDIAgentService.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Custom.ExtendLibrary, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Custom.ExtendLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.Chrome, Version=4.0.125.730, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.Chrome.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.Desktop, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.Desktop.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.Excel, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.Excel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.Exchange, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.Exchange.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.Flow, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.Flow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.IE, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.IE.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.ImageConverter, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.ImageConverter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.ImageRecognition, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.ImageRecognition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.MicrosoftOCR, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.MicrosoftOCR.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.Net, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.Orchestra, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.Orchestra.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.ProcessFlow, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.ProcessFlow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.SAP, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.SAP.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.ServerOCR, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.ServerOCR.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Lib.Web, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Lib.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Resource, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Resource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.UI.App, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.UI.App.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.UI.Control, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.UI.Control.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Utility, Version=4.1.25.1128, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Utility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Utility.Capture, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Utility.Capture.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Utility.PatternMatching, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Utility.PatternMatching.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Utility.Simulator, Version=4.1.25.1128, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\IPA.Utility.Simulator.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activities\CaptchaChrome.cs" />
+    <Compile Include="Activities\CaptchaChromeV4.cs" />
+    <Compile Include="AddIn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
+    <Content Include="hi.works.ico" />
+    <Content Include="libs\IPA.AddIn.dll" />
+    <Content Include="libs\IPA.Common.Data.dll" />
+    <Content Include="libs\IPA.Common.dll" />
+    <Content Include="libs\IPA.Common.Security.dll" />
+    <Content Include="libs\IPA.Common.UI.dll" />
+    <Content Include="libs\IPA.Common.Update.dll" />
+    <Content Include="libs\IPA.Core.dll" />
+    <Content Include="libs\IPA.Core.Engine.dll" />
+    <Content Include="libs\IPA.Core.Inspect.dll" />
+    <Content Include="libs\IPA.Core.Integration.Inspect.dll" />
+    <Content Include="libs\IPA.Core.ServiceClient.dll" />
+    <Content Include="libs\IPA.Core.VDIAgentService.dll" />
+    <Content Include="libs\IPA.Custom.ExtendLibrary.dll" />
+    <Content Include="libs\IPA.Lib.Chrome.dll" />
+    <Content Include="libs\IPA.Lib.Desktop.dll" />
+    <Content Include="libs\IPA.Lib.Excel.dll" />
+    <Content Include="libs\IPA.Lib.Exchange.dll" />
+    <Content Include="libs\IPA.Lib.Flow.dll" />
+    <Content Include="libs\IPA.Lib.IE.dll" />
+    <Content Include="libs\IPA.Lib.ImageConverter.dll" />
+    <Content Include="libs\IPA.Lib.ImageRecognition.dll" />
+    <Content Include="libs\IPA.Lib.MicrosoftOCR.dll" />
+    <Content Include="libs\IPA.Lib.Net.dll" />
+    <Content Include="libs\IPA.Lib.Orchestra.dll" />
+    <Content Include="libs\IPA.Lib.ProcessFlow.dll" />
+    <Content Include="libs\IPA.Lib.SAP.dll" />
+    <Content Include="libs\IPA.Lib.ServerOCR.dll" />
+    <Content Include="libs\IPA.Lib.Web.dll" />
+    <Content Include="libs\IPA.Lib.Win.dll" />
+    <Content Include="libs\IPA.Resource.dll" />
+    <Content Include="libs\IPA.UI.App.dll" />
+    <Content Include="libs\IPA.UI.Control.dll" />
+    <Content Include="libs\IPA.Utility.Capture.dll" />
+    <Content Include="libs\IPA.Utility.dll" />
+    <Content Include="libs\IPA.Utility.PatternMatching.dll" />
+    <Content Include="libs\IPA.Utility.Simulator.dll" />
+    <Content Include="ReadMe.txt" />
+    <Content Include="Resources\Custom.png" />
+    <Content Include="Resources\Custom_Over.png" />
+    <Content Include="Resources\excute.png" />
+    <Content Include="Resources\Get.png" />
+    <Content Include="Resources\hi.works.png" />
+    <Content Include="Resources\hi.works_excute.png" />
+    <Content Include="Resources\hi.works_over.png" />
+    <Content Include="Resources\Hyper.png" />
+    <Content Include="Resources\Hyper_Over.png" />
+    <Content Include="Resources\send-mail.png" />
+    <Content Include="Resources\Set.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\String\String-en-US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\String\String-ko-KR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FodyWeavers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="init-v2.1.cmd" />
+    <None Include="init.cmd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

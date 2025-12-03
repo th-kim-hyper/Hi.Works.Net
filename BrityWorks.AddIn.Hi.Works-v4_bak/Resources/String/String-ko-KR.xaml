@@ -1,0 +1,97 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Message Title (MSG_TITLE_ooo) -->
+    <system:String x:Key="MSG_TITLE_SAMPLE">제목 샘플</system:String>
+
+    <!-- Message Contents (MSG_ooo) -->
+    <system:String x:Key="MSG_SAMPLE">샘플입니다.</system:String>
+
+    <!-- Property 
+      Res Key format('_')  : PROP_[AddInName]_[PropertyGroup]_[PropertyName]  (Basic - It's for all properties in addin)
+      Res Key format2('_') : PROP_[AddInName]_[PropertyGroup]_[PropertyName]_[ActivityName] (Overwrite - It's only for the specified activity)
+      Contents format('\') : [Display Property Group]\[Display Property Name]
+      * PropertyView groups properties by 'Display Property Group'
+    -->
+    <system:String x:Key="Close_Prop1">메뉴\</system:String>
+    <system:String x:Key="Close_Prop2">메뉴\[Input] Find 객체 / hwnd 입력 (*)</system:String>
+    <system:String x:Key="Close_Prop3">메뉴\강제 종료 (*)</system:String>
+    <system:String x:Key="Close_Prop4">메뉴\객체입력 / hwnd 직접입력(*)</system:String>
+  
+    <system:String x:Key="Capture_Prop1">옵션\</system:String>
+    <system:String x:Key="Capture_Prop2">옵션\[Input] Chorme Find 객체 (*)</system:String>
+    <system:String x:Key="Capture_Prop3">옵션\[Input] 저장 경로 (*)</system:String>
+    <system:String x:Key="Capture_Prop4">옵션\[Input] 파일명 (기본값 Image) (*)</system:String>
+    <system:String x:Key="Capture_Prop5">옵션\[Input] 파일 형식</system:String>
+
+    <!-- Property Description
+      Res Key format1('_') : DESC_[AddinName]_[PropertyGroup]_[PropertyName]  (Basic - It's for all properties in addin)
+      Res Key format2('_') : DESC_[AddinName]_[PropertyGroup]_[PropertyName]_[ActivityName] (Overwrite - It's only for the specified activity)
+    -->
+    <system:String x:Key="DESC_Close_Prop1">true/false 값을 반환합니다.</system:String>
+    <system:String x:Key="DESC_Close_Prop2">Find카드를 이용해 찾은 대상을 입력해 주세요.</system:String>
+    <system:String x:Key="DESC_Close_Prop3">강제 종료 여부입니다. * 특정 app 에서 오류 발생</system:String>
+    <system:String x:Key="DESC_Close_Prop4">왼쪽 = Find객체 이용 / 오른쪽 = 직접 Hwnd 입력</system:String>
+
+    <system:String x:Key="DESC_Capture_Prop1">true/false 값을 반환합니다.</system:String>
+    <system:String x:Key="DESC_Capture_Prop2">Chrome Find카드를 이용해 찾은 대상을 입력해 주세요.</system:String>
+    <system:String x:Key="DESC_Capture_Prop3">저장 경로를 입력해 주세요.</system:String>
+    <system:String x:Key="DESC_Capture_Prop4">파일 확장자는 입력하지 말아주세요.</system:String>
+
+    <system:String x:Key="AddInDisplayName">하이.웍스 v3.0</system:String>
+    <system:String x:Key="DisplayName_CaptureChromeV30">하이.웍스 크롬캡쳐 v3.0</system:String>
+    <system:String x:Key="DisplayName_CloseWindowHwndV30">하이.웍스 창닫기 v3.0</system:String>
+    <system:String x:Key="DisplayName_ReceiveMailV30">하이.웍스 메일 가져오기 v3.0</system:String>
+    <system:String x:Key="DisplayName_SendMailV30">하이.웍스 메일보내기 v3.0</system:String>
+    
+    <system:String x:Key="PresetRange_ReceiveMailV30">전체;오늘;이번주;이번달;올해</system:String>
+    
+    <system:String x:Key="OUTPUT_Result">OUTPUT\결과</system:String>
+    <system:String x:Key="OUTPUT_Result_SendMailV30">OUTPUT\메세지 전송여부</system:String>
+    <system:String x:Key="OUTPUT_Result_ReceiveMailV30">OUTPUT\메세지 리스트</system:String>
+    
+    <system:String x:Key="CONNECTION_Protocol">메일서버연결\프로토콜</system:String>
+    <system:String x:Key="CONNECTION_HostName">메일서버연결\메일서버</system:String>
+    <system:String x:Key="CONNECTION_Port">메일서버연결\포트번호</system:String>
+    <system:String x:Key="CONNECTION_ID">메일서버연결\아이디</system:String>
+    <system:String x:Key="CONNECTION_Password">메일서버연결\비밀번호</system:String>
+    <system:String x:Key="CONNECTION_UseSSL">메일서버연결\SSL사용</system:String>
+
+    <system:String x:Key="MAIL_Sender">메일\보내는 사람</system:String>
+    <system:String x:Key="MAIL_Receivers">메일\받는 사람</system:String>
+    <system:String x:Key="MAIL_Ccs">메일\참조</system:String>
+    <system:String x:Key="MAIL_Bccs">메일\숨은 참조</system:String>
+    <system:String x:Key="MAIL_Subject">메일\제목</system:String>
+    <system:String x:Key="MAIL_Attachments">메일\첨부파일</system:String>
+    <system:String x:Key="MAIL_FileSize">메일\첨부파일 최대크기(MB)</system:String>
+    <system:String x:Key="MAIL_Body">메일\본문</system:String>
+    <system:String x:Key="MAIL_IsHTML">메일\HTML작성여부</system:String>
+
+    <system:String x:Key="MAIL_DateTimeRange">메일\일자검색 범위</system:String>
+    <system:String x:Key="DESC_MAIL_DateTimeRange">미리 정의된 검색일자 범위를 선택해 주세요</system:String>
+    <system:String x:Key="WARN_MAIL_DateTimeRange">미리 정의된 검색일자 범위를 선택해 주세요</system:String>
+    <system:String x:Key="MAIL_BeginTime">메일\시작일시</system:String>
+    <system:String x:Key="DESC_MAIL_BeginTime">입력된 시간 이후에 발송된 메일을 수신합니다.</system:String>
+    <system:String x:Key="WARN_MAIL_BeginTime">입력된 시간 이후에 발송된 메일을 수신합니다.</system:String>
+    <system:String x:Key="MAIL_EndTime">메일\종료일시</system:String>
+    <system:String x:Key="DESC_MAIL_EndTime">입력된 시간 이전에 발송된 메일을 수신합니다. 비어있는 경우 현재 시간까지 조회합니다.</system:String>
+    <system:String x:Key="WARN_MAIL_EndTime">입력된 시간 이전에 발송된 메일을 수신합니다. 비어있는 경우 현재 시간까지 조회합니다.</system:String>
+    <system:String x:Key="MAIL_MaxCount">메일\최대 개수</system:String>
+    <system:String x:Key="DESC_MAIL_MaxCount">조회할 메일의 최대 개수를 입력합니다.(0 인경우 모든 메일을 검색합니다.)</system:String>
+    <system:String x:Key="WARN_MAIL_MaxCount">조회할 메일의 최대 개수를 입력합니다.(0 인경우 모든 메일을 검색합니다.)</system:String>
+    <system:String x:Key="MAIL_StartNo">메일\시작 번호</system:String>
+    <system:String x:Key="DESC_MAIL_StartNo">
+        <![CDATA[조회할 메일의 시작 번호를 입력합니다.
+        음수인 경우, 값은 무시되며, 모든 메일을 대상으로 합니다. IMAP 과 POP3 프로토콜에 따라 적용 방식이 다릅니다.]]>
+    </system:String>
+    <system:String x:Key="WARN_MAIL_StartNo">
+        <![CDATA[조회할 메일의 시작 번호를 입력합니다.
+        음수인 경우, 값은 무시되며, 모든 메일을 대상으로 합니다. IMAP 과 POP3 프로토콜에 따라 적용 방식이 다릅니다.]]>
+    </system:String>
+    <system:String x:Key="MAIL_WithAttachments">메일\첨부파일 저장</system:String>
+    <system:String x:Key="MAIL_SaveDir">메일\첨부파일 저장경로</system:String>
+    <system:String x:Key="MAIL_RecentFirst">메일\최근 메세지부터 일기</system:String>
+
+</ResourceDictionary>
